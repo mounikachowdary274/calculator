@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calci{
+            height: 580px;
+            width: 410px;
+            background-image: url("https://wallpaper.dog/large/10744708.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;  
+            border: solid;
+            border-radius: 30px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;  
+           background-image: url("https://www.designyourway.net/blog/wp-content/uploads/2018/09/photo-1516642898673-edd1ced.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+       
+        }
+        .row1{
+            margin-top: 40px;
+            justify-content: space-evenly;
+            display: flex;
+            align-items: center;  
+           
+        }
+        .row2{
+            margin-top: 20px;
+            justify-content: space-evenly;
+            display: flex;
+            align-items: center;
+         
+        }
+        button{
+            font-size: 35px;
+            width: 12%;
+            border-radius: 25px;
+            box-shadow: 5px 11px 17px black,-5px 11px 17px black; 
+            border:  black solid; 
+        }
+        .display{
+            margin-top: 20px;
+           margin-left: 1px;
+          
+        }
+        textarea{
+            border-radius: 17px;
+            font-size: 45PX;
+            height: 60px;
+            width: 400px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+        border:  black solid;
+        }
+        button:hover{
+            color: orange;
+            border:  black solid;
+          
+            
+        }
+        .or{
+            color: green;
+            font-size: 40px;
+            border-radius: 15px;
+            border:  black solid;
+        }
+        .gr{
+            border-radius: 25px;
+            border:  black solid;
+        }
+        .gr:hover{
+            color: blue; 
+        }
+        #equal{
+            width: 130px;
+            background-color: orangered;
+            border:  black solid;
+            color: white;
+        }
+        #equal:hover{
+            color: black;
+        }
+        #red{
+            color: rgba(255, 0, 0, 0.915);
+            border:  black solid;
+        }
+        h1{
+             color: white;
+            text-decoration: underline;
+            text-shadow: 5px 9px 17px whitesmoke ;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="calci">
+        <h1 align="center"><b><i>CALCULATOR <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-calculator" viewBox="0 0 16 16" style="text-decoration: underline;">
+            <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
+            <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4z"/>
+          </svg></i></b></h1>
+        <div class="display">
+        <textarea name="" cols="52" rows="7" style="resize: none; " id="res"></textarea>
+        </div>
+        <div class="row1">
+            <button class="or" id="red" onclick="Clear('')"><b>c</b></button>
+            <button class="or" id="red" onclick="Back()"><b><svg xmlns="http://www.w3.org/2000/svg" width="25" height="22" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+                <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+              </svg></b></button>
+             
+            <button class="or" onclick="Solve('%')"><b><svg xmlns="http://www.w3.org/2000/svg" width="26" height="23" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
+                <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+              </svg></b></button>
+            
+            <button class="or" onclick="Solve('/')"><b>&#247;</b></button>
+        </div>
+        <div class="row2">
+            <button class="gr" onclick="res.value +=1"><b>1</b></button>
+            <button class="gr" onclick="res.value +=2"><b>2</b></button>
+            <button class="gr" onclick="res.value +=3"><b>3</b></button>
+            <button class="or" onclick="Solve('*')"><b>&#215;</b></button>
+        </div>
+
+        <div class="row2">
+            <button class="gr" onclick="res.value +=4"><b>4</b></button>
+            <button class="gr" onclick="res.value +=5"><b>5</b></button>
+            <button class="gr" onclick="res.value +=6"><b>6</b></button>
+            <button class="or" onclick="Solve('-')"><b>&#8722;</b></button>
+        </div>
+        <div class="row2">
+            <button class="gr" onclick="res.value +=7"><b>7</b></button>
+            <button class="gr" onclick="res.value +=8"><b>8</b></button>
+            <button class="gr" onclick="res.value +=9"><b>9</b></button>
+            <button class="or" onclick="Solve('+')"><b>&#43;</b></button>
+        </div>
+        <div class="row2">
+            <button class="gr" onclick="res.value +=0"><b>0</b></button>
+         
+            <button  class="gr" onclick="res.value +='.'"><b>.</b></button>
+            <button  class="or" onclick="Result('=')" id="equal"><b>=</b></button>
+        </div>
+    </div>
+    <script>
+        function Solve(val){
+            let v=document.getElementById('res').value+=val
+        }
+        function Result(){
+            let exp1=document.getElementById('res').value
+            let num=eval(exp1)
+            document.getElementById('res').value=num
+        }
+        function Back(){
+            let ev=document.getElementById('res').value
+            ev1=ev.slice(0,-1)
+            document.getElementById('res').value=ev1
+        }
+        function Clear(){
+            document.getElementById('res').value=''
+        }
+    </script>
+</body>
+</html>
